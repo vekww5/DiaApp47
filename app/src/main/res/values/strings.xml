@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">DiaApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">DiaApp</string>
+    <string name="nav_header_un_title">Дневник диабетика</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_diary">Дневник</string>
+    <string name="menu_statistics">Статистика</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="email">Введите ваш email</string>
+    <string name="password_again">Пароль еще раз</string>
+    <string name="password">Введите пароль</string>
+    <string name="action_log_out">Выйти из аккаунта</string>
+    <string name="menu_export">Экспорт</string>
+
+    <string-array name="list_data">
+        <item>Продленный инсулин</item>
+        <item>Короткий инсулин</item>
+        <item>Сахар</item>
+        <item>Еда</item>
+    </string-array>
+
+    <string name="large_text">
+        "Привет!\n"
+        "Я - разработчик этого приложения и, по совместительству, диабетик первого типа. "
+        "Мое мобильное приложение помогает легко следить за своим диабетом и понимать, что с ним происходит."
+    </string>
+    <string name="action_delete_all_items">Удалить все записи</string>
+</resources>

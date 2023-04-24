@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выберите период"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_below="@id/textViewPeriod">
+
+            <RadioButton
+                android:id="@+id/radioButtonWeak"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:checked="true"
+                android:text="Неделя"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                app:buttonTint="@color/colorPrimary"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#266200EE"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonMonth"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:text="Месяц"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                app:buttonTint="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#266200EE"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonThreeMonths"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:text="3 месяца"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                app:buttonTint="@color/colorPrimary"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#266200EE"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonSelectDate"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:text="Выберите даты"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                app:buttonTint="@color/colorPrimary"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_select_date"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/radioGroupPeriod"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:id="@+id/ll_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_baseline_date" />
+
+                <TextView
+                    android:id="@+id/textViewExportStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_arrow_forward_right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_baseline_date" />
+
+                <TextView
+                    android:id="@+id/textViewExportEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_arrow_forward_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line6"
+            android:layout_below="@id/ll_select_date"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#266200EE"/>
+
+        <TextView
+            android:id="@+id/textViewFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line6"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Выберите формат"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupFormatExport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layoutDirection="rtl"
+            android:layout_below="@+id/textViewFormat">
+
+            <RadioButton
+                android:id="@+id/radioButtonExportCsv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:checked="true"
+                android:text="Обычный CSV"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                app:buttonTint="@color/colorPrimary"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#266200EE"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonExportExcel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:layoutDirection="rtl"
+                android:text="CSV для Excel"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                app:buttonTint="@color/colorPrimary"/>
+        </RadioGroup>
+
+        <View
+            android:id="@+id/line7"
+            android:layout_below="@id/radioGroupFormatExport"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#266200EE"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/line7">
+            <Button
+                android:id="@+id/btn_export"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_button"
+                android:textColor="#FFFFFF"
+                android:text="Экспорт"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

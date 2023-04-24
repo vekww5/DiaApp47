@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingStart="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:text="ПРОФИЛЬ" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/image_view_email"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_email"/>
+
+            <TextView
+                android:id="@+id/text_view_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_view_email"
+                android:textColor="@android:color/black"
+                android:hint="Email user"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_below="@+id/text_view_email"
+                android:background="#266200EE"/>
+
+            <ImageView
+                android:id="@+id/image_view_password"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@+id/line1"
+                android:src="@drawable/ic_lock"/>
+
+            <TextView
+                android:id="@+id/text_view_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_below="@+id/line1"
+                android:layout_toEndOf="@+id/image_view_password"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_view_date_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingStart="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:text="ДАННЫЕ ПАЦИЕНТА" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="15dp"
+            android:background="#ffffff">
+            <ImageView
+                android:id="@+id/image_view_name"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_name_fam"/>
+
+            <TextView
+                android:id="@+id/text_view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_view_name"
+                android:text="Имя"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_text_name_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Введите ваше имя"
+                android:background="@android:color/transparent"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:gravity="end"
+                android:layout_toEndOf="@+id/text_view_name" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="15dp"
+            android:background="#ffffff">
+            <ImageView
+                android:id="@+id/image_view_name_last"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_name_fam"/>
+
+            <TextView
+                android:id="@+id/text_view_name_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_view_name_last"
+                android:text="Фамилия"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_text_name_last_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Введите вашу фамилию"
+                android:textColor="@android:color/black"
+                android:background="@android:color/transparent"
+                android:textSize="20sp"
+                android:gravity="end"
+                android:layout_toEndOf="@+id/text_view_name_last" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="15dp"
+            android:background="#ffffff">
+            <ImageView
+                android:id="@+id/image_view_height"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_ruler_v2"/>
+
+            <TextView
+                android:id="@+id/text_view_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Рост"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@+id/image_view_height"/>
+
+            <EditText
+                android:id="@+id/edit_text_height_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:hint="Введите рост"
+                android:textColor="@android:color/black"
+                android:gravity="end"
+                android:background="@android:color/transparent"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/text_view_height" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/image_view_weight"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_weight_v2"/>
+
+            <TextView
+                android:id="@+id/text_view_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вес"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@+id/image_view_weight"/>
+
+            <EditText
+                android:id="@+id/edit_text_weight_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Введите вес"
+                android:textColor="@android:color/black"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:gravity="end"
+                android:background="@android:color/transparent"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/text_view_weight"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_date_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/image_view_birth"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_birthday_cake_v2"/>
+
+            <TextView
+                android:id="@+id/text_view_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_view_birth"
+                android:text="Дата рождения"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text_view_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                android:textColor="@android:color/black"
+                android:hint="Выберите дату"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/text_view_birth"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/image_view_type_dia"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_type_dia" />
+
+            <TextView
+                android:id="@+id/text_view_type_dia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_view_type_dia"
+                android:text="Тип диабета"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <ToggleButton
+                android:id="@+id/toggle_button_dia"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/toggle_selector_background"
+                android:textColor="@drawable/toggle_select_text_color"
+                android:textOff="I"
+                android:textOn="II" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/image_view_type_pol"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_gender"/>
+
+            <TextView
+                android:id="@+id/text_view_type_pol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пол"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@+id/image_view_type_pol"/>
+
+            <ToggleButton
+                android:id="@+id/toggle_button_pol"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:textColor="@drawable/toggle_select_text_color"
+                android:background="@drawable/toggle_selector_background"
+                android:textOff="М"
+                android:textOn="Ж" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <TextView
+            android:id="@+id/text_view_insulin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingStart="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:text="ИНСУЛИНЫ" />
+
+        <RelativeLayout
+            android:id="@+id/rl_inject_short"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/image_view_short_inject"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_injection_short_v2"/>
+
+            <TextView
+                android:id="@+id/text_short_inject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Короткий"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@+id/image_view_short_inject"/>
+
+            <Spinner
+                android:id="@+id/spinner_inject_short"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:spinnerMode="dialog"
+                android:layout_toEndOf="@+id/text_short_inject"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_inject_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/image_view_long_inject"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_injection_long_v2"/>
+
+            <TextView
+                android:id="@+id/text_long_inject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Продленный"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@+id/image_view_long_inject"/>
+
+            <Spinner
+                android:id="@+id/spinner_inject_long"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:spinnerMode="dialog"
+                android:layout_toEndOf="@+id/text_long_inject"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/text_view_email"
+            android:background="#266200EE"/>
+
+        <Button
+            android:id="@+id/button_save_user_info"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:text="Сохранить"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_diary"
+            android:icon="@drawable/ic_diary"
+            android:title="@string/menu_diary" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_statistics"
+            android:title="@string/menu_statistics" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/nav_export"
+            android:icon="@drawable/ic_baseline_archive"
+            android:title="@string/menu_export"
+            />
+    </group>
+
+    <item android:title="Информация">
+        <menu>
+            <item
+                android:id="@+id/info"
+                android:icon="@drawable/ic_support_info"
+                android:title="О приложении" />
+        </menu>
+    </item>
+
+</menu>

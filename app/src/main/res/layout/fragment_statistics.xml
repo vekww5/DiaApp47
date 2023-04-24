@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/chart_hello"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="14dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_button_day_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chart_hello"
+        android:weightSum="2"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroupDayWeak"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonDay"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:text="День"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:checked="true"
+                android:textColor="@drawable/toggle_select_text_color"
+                android:background="@drawable/radio_button_left_selector"
+                android:button="@android:color/transparent"
+                android:layout_weight="1"
+                app:buttonCompat="@null"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonWeak"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:text="Неделя"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@drawable/toggle_select_text_color"
+                android:background="@drawable/radio_button_right_selector"
+                android:button="@android:color/transparent"
+                android:layout_weight="1"
+                app:buttonCompat="@null"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_average"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Средний сахар"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:padding="24dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/ll_button_day_week"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_av"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/text_view_average"
+        android:weightSum="3"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_view_title_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/black"
+                android:text="День"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_view_text_average_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="@android:color/black"
+                android:text="0,0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/text_view_title_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Неделя"
+                android:textColor="@android:color/black"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_view_text_average_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="@android:color/black"
+                android:text="0,0" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/text_view_title_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Месяц"
+                android:textColor="@android:color/black"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_view_text_average_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="5dp"
+                android:text="0,0" />
+        </LinearLayout>
+    </LinearLayout>
+  </RelativeLayout>
+</ScrollView>

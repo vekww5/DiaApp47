@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu">
+
+    <item
+        android:id="@+id/action_filter_log"
+        android:title="Все"
+        android:visible="false"
+        app:showAsAction="ifRoom">
+        <menu android:id="@+id/menu_filter">
+            <item
+                android:id="@+id/action_filter_day"
+                android:title="День"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_filter_3days"
+                android:title="3 дня"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_filter_weak"
+                android:title="Неделя"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_filter_month"
+                android:title="Месяц"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_filter_all"
+                android:title="Все"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_delete_all_items"
+        android:title="@string/action_delete_all_items"
+        android:visible="false"
+        android:icon="@drawable/ic_recycle_bin_2"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_log_out"
+        android:orderInCategory="100"
+        android:title="@string/action_log_out"
+        android:icon="@drawable/ic_log_out"
+        app:showAsAction="never" />
+</menu>

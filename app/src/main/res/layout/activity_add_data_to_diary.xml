@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManagementDiaryDataActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/text_view_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Date"
+            android:textSize="24sp"
+            android:onClick="OnClickDate"
+            android:textColor="@android:color/black"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/text_view_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="Time"
+            android:textSize="24sp"
+            android:layout_below="@id/text_view_date"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@android:color/black"
+            android:onClick="OnClickTime"/>
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spinner_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:entries="@array/list_data"
+        android:spinnerMode="dialog"
+        android:layout_below="@id/rl_date_time"/>
+
+    <LinearLayout
+        android:id="@+id/ll_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="34dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/spinner_select">
+        <TextView
+            android:id="@+id/text_view_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.3"
+            android:layout_gravity="bottom"
+            android:textColor="@android:color/black"
+            android:textSize="40sp" />
+        <TextView
+            android:id="@+id/text_view_ed_units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="ммоль/л"
+            android:textColor="@android:color/black"
+            android:layout_gravity="bottom"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_seek_bars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_number"
+        android:padding="14dp">
+
+        <SeekBar
+            android:id="@+id/seek_bar_ed_1"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="26dp"
+            android:max="60"
+            android:progress="0"
+            android:thumb="@drawable/seekbar_drawable_thumb" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_ed_0.1"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="17dp"
+        android:max="9"
+        android:progress="0"
+        android:thumb="@drawable/seekbar_drawable_thumb"
+        android:layout_below="@id/seek_bar_ed_1"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_add_record"
+        android:layout_width="303dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="52dp"
+        android:text="Добавить"
+        android:textSize="25dp"
+        android:layout_below="@id/rl_seek_bars"
+        android:background="@drawable/custom_button"
+        android:textColor="#FFFFFF"
+        android:onClick="OnClickAddRecord"/>
+
+    <Button
+        android:id="@+id/button_edit_record"
+        android:layout_width="303dp"
+        android:layout_height="72dp"
+        android:layout_below="@id/rl_seek_bars"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/custom_button"
+        android:text="Изменить"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:visibility="gone"
+        android:onClick="OnClickUpdateRecord"/>
+</RelativeLayout>
